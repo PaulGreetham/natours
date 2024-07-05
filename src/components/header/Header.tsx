@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           <span className="heading-main">Outdoors</span>
           <span className="heading-sub">is where life happens</span>
         </h1>
-        <a href="#" className="btn btn-white btn-animated">Discover our tours</a>
+        <a href="/" className="btn btn-white btn-animated">Discover our tours</a>
       </div>
     </header>
   );
