@@ -2,7 +2,7 @@
 
 .about {
   background-color: $color-white;
-  margin: 10rem 0;
+  margin: 8rem 0 4rem;
 
   h2 {
     display: flex;
@@ -37,15 +37,12 @@
         font-size: $default-font-size;
         font-weight: 700;
         text-transform: uppercase;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
       }
 
       p {
         font-size: $default-font-size;
-
-        &:not(:last-child) {
-          margin-bottom: 4rem;
-        }
+        margin-bottom: 4rem;
       }
 
       .info-button {

@@ -1,0 +1,55 @@
+@import "../../assets/styles/_variables";
+
+.features {
+  background-image: linear-gradient(
+    to right bottom,
+    rgb($color-primary-light, 0.9),
+    rgb($color-primary, 0.8)),
+    url(../../assets/images/nat-4.jpg);
+  background-size: cover;
+  padding: 16rem 0;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 3rem;
+
+    .feature-card {
+      background-color: rgba($color-white, 0.8);
+      font-size: 1.5rem;
+      width: 20%;
+      padding: 2.5rem;
+      text-align: center;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-1.5rem) scale(1.05);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.2);
+      }
+
+      .icon {
+        display: inline-block;
+        font-size: 5rem;
+        margin-bottom: 2.5rem;
+        color: $color-primary;
+      }
+
+      h3 {
+        font-size: $default-font-size;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1.2rem
+      }
+    }
+  }
+}
