@@ -44,7 +44,7 @@
         font-size: $default-font-size;
 
         &:not(:last-child) {
-          margin-bottom: 1.5rem;
+          margin-bottom: 4rem;
         }
       }
 
@@ -82,25 +82,24 @@
       transition: all 0.2s;
 
       img {
-        width: 55%;
+        width: 60%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
         position: absolute;
         transition: all 0.2s;
         outline-offset: 2rem;
 
         &.photo-1 {
-          top: -2rem;
           left: 0;
         }
 
         &.photo-2 {
           right: 0;
-          top: 6rem;
+          top: 8rem;
         }
 
         &.photo-3 {
           left: 20%;
-          top: 14rem;
+          top: 16rem;
         }
 
         &:hover {
