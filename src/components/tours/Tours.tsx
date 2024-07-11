@@ -6,7 +6,7 @@ const Tours: React.FC = () => {
     <header className="tours">
       <h2>Most popular tours</h2>
       <div className="tour-cards">
-        <div className="card">
+        <div className="card" id="card-1">
           <div className="card-inner">
             <div className="card-front">
               Card 1
@@ -16,7 +16,7 @@ const Tours: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card" id="card-2">
           <div className="card-inner">
             <div className="card-front">
               Card 2
@@ -26,7 +26,7 @@ const Tours: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card" id="card-3">
           <div className="card-inner">
             <div className="card-front">
               Card 3

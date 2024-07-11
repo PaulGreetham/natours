@@ -37,7 +37,7 @@
         position: relative;
         width: 100%;
         height: 40rem;
-        transition: transform 0.8s;
+        transition: all 0.8s ease;
         transform-style: preserve-3d;
 
         & .card-front,
@@ -51,21 +51,45 @@
           justify-content: center;
           align-items: center;
           font-size: 2rem;
-          color: $color-white;
-        }
-
-        & .card-front {
-          background-color: orangered;
+          border-radius: 3px;
+          box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+          color: $color-grey-dark;
         }
 
         & .card-back {
-          background-color: $color-primary-dark;
           transform: rotateY(180deg);
         }
       }
 
       &:hover .card-inner {
         transform: rotateY(180deg);
+      }
+    }
+
+    #card-1 {
+      .card-inner .card-front {
+        background-color: $color-white;
+      }
+      .card-inner .card-back {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
+
+    #card-2 {
+      .card-inner .card-front {
+        background-color: $color-white;
+      }
+      .card-inner .card-back {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+    }
+
+    #card-3 {
+      .card-inner .card-front {
+        background-color: $color-white;
+      }
+      .card-inner .card-back {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
       }
     }
   }
