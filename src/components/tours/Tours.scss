@@ -1,0 +1,72 @@
+@import "../../assets/styles/_variables";
+
+.tours {
+  background-color: $color-white;
+  margin: 16rem 0;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+  }
+
+  .tour-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem;
+    gap: 8rem;
+
+    .card {
+      perspective: 150rem;
+      width: 100%;
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+
+        & .card-front,
+        & .card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          color: $color-white;
+        }
+
+        & .card-front {
+          background-color: orangered;
+        }
+
+        & .card-back {
+          background-color: $color-primary-dark;
+          transform: rotateY(180deg);
+        }
+      }
+
+      &:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
