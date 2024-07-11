@@ -9,10 +9,28 @@ const Tours: React.FC = () => {
         <div className="card" id="card-1">
           <div className="card-inner">
             <div className="card-front">
-              Card 1
+              <div className="card-picture">
+                &nbsp;
+              </div>
+              <h4>
+                <span>The Sea Explorer</span>
+              </h4>
+              <div className="card-details">
+                <ul>
+                  <li>3 day tour</li>
+                  <li>Up to 30 people</li>
+                  <li>2 tour guides</li>
+                  <li>Sleep in cozy hotels</li>
+                  <li>Difficulty: easy</li>
+                </ul>
+              </div>
             </div>
             <div className="card-back">
-              Back
+              <div className="card-back-container">
+                <p className="card-back-text">Only</p>
+                <p className="card-back-price">€295</p>
+              </div>
+              <a href="/" className="card-back-button">Book now!</a>
             </div>
           </div>
         </div>

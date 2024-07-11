@@ -26,7 +26,7 @@
   .tour-cards {
     display: flex;
     justify-content: space-around;
-    padding: 8rem;
+    padding: 12rem;
     gap: 8rem;
 
     .card {
@@ -36,7 +36,7 @@
       .card-inner {
         position: relative;
         width: 100%;
-        height: 40rem;
+        height: 45rem;
         transition: all 0.8s ease;
         transform-style: preserve-3d;
 
@@ -48,10 +48,12 @@
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          justify-content: space-between;
           align-items: center;
           font-size: 2rem;
           border-radius: 3px;
+          overflow: hidden;
           box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
           color: $color-grey-dark;
         }
@@ -62,16 +64,153 @@
       }
 
       &:hover .card-inner {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
       }
     }
 
     #card-1 {
       .card-inner .card-front {
-        background-color: $color-white;
+        .card-picture {
+          width: 100%;
+          height: 45%;
+          background-size: cover;
+          background-position: center;
+          background-blend-mode: screen;
+          background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url('../../assets/images/nat-5.jpg');
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
       }
       .card-inner .card-back {
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark);
+      }
+
+      h4 {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 8rem;
+        right: 2rem;
+        text-align: right;
+        width: 70%;
+
+        span {
+          padding: 1rem 1.5rem;
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          background-image: linear-gradient(to right bottom,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary-dark, 0.8));
+        }
+      }
+
+      .card-details {
+        height: 55%;
+        width: 80%;
+        padding: 1rem;
+
+        ul {
+          margin: 0 auto;
+          list-style: none;
+          width: 100%;
+
+          li {
+            text-align: center;
+            font-size: 1.25rem;
+            padding: 1rem;
+
+            &:not(:last-child) {
+              border-bottom: 1px solid $color-grey-light;
+            }
+          }
+        }
+      }
+
+      .card-back {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(180deg);
+
+        .card-back-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-top: 40%;
+          color: $color-white;
+
+          .card-back-text {
+            font-size: 2.5rem;
+            font-weight: 00;
+            text-align: center;
+            padding-top: 5rem;
+            padding: 1rem;
+          }
+
+          .card-back-price {
+            font-size: 5rem;
+            font-weight: 300;
+          }
+        }
+
+        .card-back-button {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 4rem;
+          display: inline-block;
+          margin-bottom: 6rem;
+          border-radius: 10rem;
+          transition: all 0.2s;
+          position: relative;
+          font-size: $default-font-size;
+          background-color: $color-white;
+          color: $color-grey-dark;
+
+          &:link,
+          &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+          }
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+          }
+
+          &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+          }
+
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+            background-color: $color-white;
+          }
+
+          &:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+
+          &.btn-animated {
+            animation: moveInBottom 0.5s ease-out 0.75s;
+            animation-fill-mode: backwards;
+          }
+        }
       }
     }
 
