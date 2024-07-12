@@ -219,6 +219,87 @@
       .card-inner .card-back {
         background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
       }
+
+      .card-back {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(180deg);
+
+        .card-back-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-top: 40%;
+          color: $color-white;
+
+          .card-back-text {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+          }
+
+          .card-back-price {
+            font-size: 5rem;
+            font-weight: 300;
+          }
+        }
+
+        .card-back-button {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 4rem;
+          display: inline-block;
+          margin-bottom: 6rem;
+          border-radius: 10rem;
+          transition: all 0.2s;
+          position: relative;
+          font-size: $default-font-size;
+          background-color: $color-white;
+          color: $color-grey-dark;
+
+          &:link,
+          &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+          }
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+          }
+
+          &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+          }
+
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+            background-color: $color-white;
+          }
+
+          &:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+
+          &.btn-animated {
+            animation: moveInBottom 0.5s ease-out 0.75s;
+            animation-fill-mode: backwards;
+          }
+        }
+      }
     }
 
     #card-3 {
@@ -227,6 +308,87 @@
       }
       .card-inner .card-back {
         background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
+
+      .card-back {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(180deg);
+
+        .card-back-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-top: 40%;
+          color: $color-white;
+
+          .card-back-text {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+          }
+
+          .card-back-price {
+            font-size: 5rem;
+            font-weight: 300;
+          }
+        }
+
+        .card-back-button {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 4rem;
+          display: inline-block;
+          margin-bottom: 6rem;
+          border-radius: 10rem;
+          transition: all 0.2s;
+          position: relative;
+          font-size: $default-font-size;
+          background-color: $color-white;
+          color: $color-grey-dark;
+
+          &:link,
+          &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+          }
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+          }
+
+          &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+          }
+
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+            background-color: $color-white;
+          }
+
+          &:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+
+          &.btn-animated {
+            animation: moveInBottom 0.5s ease-out 0.75s;
+            animation-fill-mode: backwards;
+          }
+        }
       }
     }
   }

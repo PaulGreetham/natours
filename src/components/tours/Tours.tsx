@@ -40,7 +40,11 @@ const Tours: React.FC = () => {
               Card 2
             </div>
             <div className="card-back">
-              Back
+              <div className="card-back-container">
+                <p className="card-back-text">Only</p>
+                <p className="card-back-price">€795</p>
+              </div>
+              <a href="/" className="card-back-button">Book now!</a>
             </div>
           </div>
         </div>
@@ -50,7 +54,11 @@ const Tours: React.FC = () => {
               Card 3
             </div>
             <div className="card-back">
-              Back
+              <div className="card-back-container">
+                <p className="card-back-text">Only</p>
+                <p className="card-back-price">€495</p>
+              </div>
+              <a href="/" className="card-back-button">Book now!</a>
             </div>
           </div>
         </div>
