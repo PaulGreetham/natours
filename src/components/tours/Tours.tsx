@@ -37,12 +37,26 @@ const Tours: React.FC = () => {
         <div className="card" id="card-2">
           <div className="card-inner">
             <div className="card-front">
-              Card 2
-            </div>
+                <div className="card-picture">
+                  &nbsp;
+                </div>
+                <h4>
+                  <span>The Forest Hiker</span>
+                </h4>
+                <div className="card-details">
+                  <ul>
+                    <li>7 day tour</li>
+                    <li>Up to 40 people</li>
+                    <li>6 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: medium</li>
+                  </ul>
+                </div>
+              </div>
             <div className="card-back">
               <div className="card-back-container">
                 <p className="card-back-text">Only</p>
-                <p className="card-back-price">€795</p>
+                <p className="card-back-price">€495</p>
               </div>
               <a href="/" className="card-back-button">Book now!</a>
             </div>
@@ -51,12 +65,26 @@ const Tours: React.FC = () => {
         <div className="card" id="card-3">
           <div className="card-inner">
             <div className="card-front">
-              Card 3
-            </div>
+                <div className="card-picture">
+                  &nbsp;
+                </div>
+                <h4>
+                  <span>The Snow Adventurer</span>
+                </h4>
+                <div className="card-details">
+                  <ul>
+                    <li>5 day tour</li>
+                    <li>Up to 15 people</li>
+                    <li>3 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: hard</li>
+                  </ul>
+                </div>
+              </div>
             <div className="card-back">
               <div className="card-back-container">
                 <p className="card-back-text">Only</p>
-                <p className="card-back-price">€495</p>
+                <p className="card-back-price">€795</p>
               </div>
               <a href="/" className="card-back-button">Book now!</a>
             </div>
