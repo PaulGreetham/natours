@@ -1,5 +1,17 @@
 @import "../../assets/styles/_variables";
 
+@mixin card-background($color-light, $color-dark, $image-url) {
+  background-image: linear-gradient(to right bottom, $color-light, $color-dark), url($image-url);
+}
+
+@mixin card-back-background($color-light, $color-dark) {
+  background-image: linear-gradient(to right, $color-light, $color-dark);
+}
+
+@mixin card-h4-background($color-light, $color-dark) {
+  background-image: linear-gradient(to right, rgba($color-light, 0.85), rgba($color-dark, 0.8));
+}
+
 .tours {
   background-color: $color-white;
   margin: 16rem 0;
@@ -27,7 +39,7 @@
     display: flex;
     justify-content: space-around;
     padding: 8rem;
-    gap: 6rem;
+    gap: 8rem;
 
     .card {
       perspective: 150rem;
@@ -40,7 +52,7 @@
       .card-inner {
         position: relative;
         width: 100%;
-        height: 45rem;
+        height: 50rem;
         transition: all 0.8s ease;
         transform-style: preserve-3d;
 
@@ -72,67 +84,55 @@
       }
     }
 
+    .card-picture {
+      width: 100%;
+      height: 55%;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
     #card-1 {
       .card-inner .card-front {
         .card-picture {
-          width: 100%;
-          height: 45%;
-          background-size: cover;
-          background-position: center;
-          background-blend-mode: screen;
-          background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url('../../assets/images/nat-5.jpg');
-          -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          @include card-background($color-secondary-light, $color-secondary-dark, '../../assets/images/nat-5.jpg');
         }
       }
       .card-inner .card-back {
-        background-color: $color-primary-dark;
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        @include card-back-background($color-secondary-light, $color-secondary-dark);
       }
       h4 span {
-        background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.8));
+        @include card-h4-background($color-secondary-light, $color-secondary-dark);
       }
     }
 
     #card-2 {
       .card-inner .card-front {
         .card-picture {
-          width: 100%;
-          height: 45%;
-          background-size: cover;
-          background-position: center;
-          background-blend-mode: screen;
-          background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url('../../assets/images/nat-6.jpg');
-          -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          @include card-background($color-primary-light, $color-primary-dark, '../../assets/images/nat-6.jpg');
         }
       }
       .card-inner .card-back {
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        @include card-back-background($color-primary-light, $color-primary-dark);
       }
       h4 span {
-        background-image: linear-gradient(to right, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.8));
+        @include card-h4-background($color-primary-light, $color-primary-dark);
       }
     }
 
     #card-3 {
       .card-inner .card-front {
         .card-picture {
-          width: 100%;
-          height: 45%;
-          background-size: cover;
-          background-position: center;
-          background-blend-mode: screen;
-          background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url('../../assets/images/nat-7.jpg');
-          -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          @include card-background($color-tertiary-light, $color-tertiary-dark, '../../assets/images/nat-7.jpg');
         }
       }
       .card-inner .card-back {
-        background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+        @include card-back-background($color-tertiary-light, $color-tertiary-dark);
       }
       h4 span {
-        background-image: linear-gradient(to right, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.8));
+        @include card-h4-background($color-tertiary-light, $color-tertiary-dark);
       }
     }
 
