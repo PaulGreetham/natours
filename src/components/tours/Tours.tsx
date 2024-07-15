@@ -3,7 +3,7 @@ import './Tours.scss';
 
 const Tours: React.FC = () => {
   return (
-    <header className="tours">
+    <div className="tours">
       <h2>Most popular tours</h2>
       <div className="tour-cards">
         <div className="card" id="card-1">
@@ -91,7 +91,7 @@ const Tours: React.FC = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

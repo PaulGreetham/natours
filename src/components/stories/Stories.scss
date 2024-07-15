@@ -1,0 +1,28 @@
+@import "../../assets/styles/_variables";
+
+.stories {
+  padding: 15rem 0;
+}
+
+.story {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem;
+  overscroll-behavior-x: 0 3rem 6rem rgba($color-black, 0.2);
+  background-color: $color-white;
+  border-radius: 3px;
+  font-size: $default-font-size;
+
+  & .story-shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: red;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+  }
+}
